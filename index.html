@@ -4,33 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akshay Katageri | Generative AI Engineer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- ✅ Tailwind CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            accent: '#00df9a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-white text-gray-900 antialiased">
-  <header class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between">
+<body class="bg-white text-gray-900 antialiased font-sans">
+
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between">
     <div>
-      <h1 class="text-2xl font-semibold">Akshay Katageri</h1>
+      <h1 class="text-3xl font-bold">Akshay Katageri</h1>
       <p class="text-sm text-gray-600">Generative AI Engineer — Multi-Agent Systems & RAG</p>
     </div>
     <nav class="space-x-4 text-sm mt-4 md:mt-0">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#skills" class="hover:underline">Skills</a>
-      <a href="#work" class="hover:underline">Work</a>
-      <a href="#projects" class="hover:underline">Projects</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-      <a href="Akshay-Katageri- Resume.pdf" download class="ml-4 inline-block px-3 py-1 bg-gray-900 text-white rounded">Resume</a>
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#skills" class="hover:text-accent">Skills</a>
+      <a href="#work" class="hover:text-accent">Work</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+      <a href="Akshay-Katageri- Resume.pdf" download class="ml-4 inline-block px-3 py-1 bg-primary text-white rounded hover:bg-gray-800">Resume</a>
     </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6">
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center py-8">
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-6">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center py-12 border-b border-gray-200">
       <div class="md:col-span-2">
-        <h2 class="text-4xl font-bold">Hi — I’m Akshay. I build production-ready Generative AI systems.</h2>
-        <p class="mt-4 text-gray-700 leading-relaxed">I design and ship multi-agent workflows, RAG pipelines, and scalable LLM serving to help teams reduce costs, improve accuracy, and safely deploy AI at scale. Currently focused on LangGraph, CrewAI, and efficient model serving.</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight">Hi — I’m Akshay. I build production-ready Generative AI systems.</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed text-lg">
+          I design and ship multi-agent workflows, RAG pipelines, and scalable LLM serving to help teams reduce costs,
+          improve accuracy, and safely deploy AI at scale. Currently focused on LangGraph, CrewAI, and efficient model serving.
+        </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#projects" class="px-4 py-2 border rounded hover:bg-gray-100">See Projects</a>
-          <a href="Akshay-Katageri- Resume.pdf" download class="px-4 py-2 bg-gray-900 text-white rounded">Download Resume</a>
-          <a href="https://www.linkedin.com/in/akshayy-katageri/" target="_blank" class="px-4 py-2 border rounded">LinkedIn</a>
+          <a href="#projects" class="px-5 py-2 border rounded hover:bg-gray-100">See Projects</a>
+          <a href="Akshay-Katageri- Resume.pdf" download class="px-5 py-2 bg-primary text-white rounded hover:bg-gray-800">Download Resume</a>
+          <a href="https://www.linkedin.com/in/akshayy-katageri/" target="_blank" class="px-5 py-2 border rounded hover:bg-gray-100">LinkedIn</a>
         </div>
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
           <div>
@@ -43,28 +66,36 @@
           </div>
         </div>
       </div>
+
       <div class="flex justify-center md:justify-end">
-        <div class="w-56 h-56 rounded-2xl overflow-hidden shadow-lg">
+        <div class="w-56 h-56 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
           <img src="Screenshot 2025-07-20 at 4.29.42 PM.png" alt="Akshay Katageri" class="object-cover w-full h-full">
         </div>
       </div>
     </section>
 
-    <section id="about" class="py-8 border-t">
+    <!-- ABOUT -->
+    <section id="about" class="py-12 border-b border-gray-200">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="md:col-span-2">
-          <h3 class="text-2xl font-semibold">About</h3>
-          <p class="mt-3 text-gray-700">I have 4 years of experience building safe, observable, and cost-efficient AI systems with strong cross-functional collaboration. I focus on agent architectures, RAG pipelines, evaluation and observability, and production-grade serving optimizations.</p>
-          <h4 class="mt-6 font-semibold">Key highlights</h4>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Designed multi-agent systems that improved throughput and reduced latency at production scale.</li>
-            <li>Implemented RAG and hybrid retrieval systems to improve groundedness and reduce ticket deflection.</li>
-            <li>Built secure orchestration and audit tooling to ensure PII-safe operations across tool calls.</li>
+          <h3 class="text-3xl font-semibold">About</h3>
+          <p class="mt-3 text-gray-700 text-lg">
+            I have 4 years of experience building safe, observable, and cost-efficient AI systems with strong
+            cross-functional collaboration. My focus is on agent architectures, RAG pipelines, evaluation and
+            observability, and production-grade serving optimizations.
+          </p>
+          <h4 class="mt-6 font-semibold text-xl">Key Highlights</h4>
+          <ul class="list-disc ml-5 mt-3 text-gray-700 space-y-2">
+            <li>Designed multi-agent systems improving throughput and reducing latency at production scale.</li>
+            <li>Implemented RAG and hybrid retrieval systems to improve groundedness and deflect tickets.</li>
+            <li>Built secure orchestration and audit tooling ensuring PII-safe operations across tool calls.</li>
           </ul>
         </div>
-        <aside id="skills" class="p-4 bg-gray-50 rounded">
-          <h4 class="font-semibold">Skills</h4>
-          <div class="mt-3 grid grid-cols-2 gap-2 text-sm text-gray-700">
+
+        <!-- SKILLS -->
+        <aside id="skills" class="p-6 bg-gray-50 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl mb-3">Skills</h4>
+          <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
             <span class="px-2 py-1 border rounded">LangGraph</span>
             <span class="px-2 py-1 border rounded">CrewAI</span>
             <span class="px-2 py-1 border rounded">AutoGen</span>
@@ -80,83 +111,91 @@
       </div>
     </section>
 
-    <section id="work" class="py-8 border-t">
-      <h3 class="text-2xl font-semibold">Work Experience</h3>
-      <div class="mt-4 space-y-6">
-        <div class="p-4 rounded border">
+    <!-- EXPERIENCE -->
+    <section id="work" class="py-12 border-b border-gray-200">
+      <h3 class="text-3xl font-semibold mb-6">Work Experience</h3>
+      <div class="space-y-6">
+        <div class="p-5 rounded-xl border hover:shadow-md transition">
           <div class="flex items-baseline justify-between">
-            <h4 class="font-semibold">GenAI Engineer — KGS Technology Group, Inc.</h4>
+            <h4 class="font-semibold text-lg">GenAI Engineer — KGS Technology Group, Inc.</h4>
             <span class="text-sm text-gray-600">July 2025 - Present</span>
           </div>
-          <ul class="list-disc ml-5 mt-3 text-gray-700">
-            <li>Redesigned Multi-Agent Workflows using LangGraph & TensorRT; reduced P95 latency 45% and doubled throughput.</li>
+          <ul class="list-disc ml-5 mt-3 text-gray-700 space-y-1">
+            <li>Redesigned multi-agent workflows using LangGraph & TensorRT; reduced P95 latency by 45%.</li>
             <li>Built secure MCP servers with CrewAI orchestration, shortening integration lead time by 90%.</li>
           </ul>
         </div>
-        <div class="p-4 rounded border">
+        <div class="p-5 rounded-xl border hover:shadow-md transition">
           <div class="flex items-baseline justify-between">
-            <h4 class="font-semibold">Data Analyst — CloudData Technology</h4>
+            <h4 class="font-semibold text-lg">Data Analyst — CloudData Technology</h4>
             <span class="text-sm text-gray-600">Aug 2024 - July 2025</span>
           </div>
-          <ul class="list-disc ml-5 mt-3 text-gray-700">
-            <li>Created LLM-driven pipelines reducing forecast error 18% and enabling NL→SQL analytics copilot.</li>
+          <ul class="list-disc ml-5 mt-3 text-gray-700 space-y-1">
+            <li>Created LLM-driven pipelines reducing forecast error by 18% and enabling NL→SQL copilot.</li>
             <li>Implemented RAG assistant improving data integrity and SLA reliability.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="py-8 border-t">
-      <h3 class="text-2xl font-semibold">Selected Projects</h3>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Trip Planner — Multimodal Multi-Agent Travel Copilot</h4>
-          <p class="mt-2 text-gray-700 text-sm">Built with CrewAI & LangGraph. 97% user satisfaction across 1,200+ itineraries. Optimized serving to 3.2s latency.</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="py-12 border-b border-gray-200">
+      <h3 class="text-3xl font-semibold mb-6">Selected Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 border rounded-xl hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Trip Planner — Multimodal Multi-Agent Travel Copilot</h4>
+          <p class="mt-2 text-gray-700 text-sm">Built with CrewAI & LangGraph. 97% user satisfaction across 1,200+ itineraries, optimized serving to 3.2s latency.</p>
         </div>
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Autonomous Delivery Agent</h4>
+        <div class="p-5 border rounded-xl hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Autonomous Delivery Agent</h4>
           <p class="mt-2 text-gray-700 text-sm">Route-aware ordering & dispatch using MCP protocols and vLLM; improved route efficiency by 48%.</p>
         </div>
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Universal Commerce Copilot</h4>
-          <p class="mt-2 text-gray-700 text-sm">Chat-first recommender & checkout using OpenAI SDK + hybrid retrieval; increased checkouts by 3.2x.</p>
+        <div class="p-5 border rounded-xl hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Universal Commerce Copilot</h4>
+          <p class="mt-2 text-gray-700 text-sm">Chat-first recommender and checkout using OpenAI SDK + hybrid retrieval; increased checkouts by 3.2x.</p>
         </div>
       </div>
     </section>
 
-    <section id="education" class="py-8 border-t">
-      <h3 class="text-2xl font-semibold">Education</h3>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Pace University</h4>
+    <!-- EDUCATION -->
+    <section id="education" class="py-12 border-b border-gray-200">
+      <h3 class="text-3xl font-semibold mb-6">Education</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 border rounded-xl">
+          <h4 class="font-semibold text-lg">Pace University</h4>
           <p class="text-sm text-gray-700">Master’s in Data Science — New York City, USA</p>
         </div>
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Savitribai Phule Pune University</h4>
+        <div class="p-5 border rounded-xl">
+          <h4 class="font-semibold text-lg">Savitribai Phule Pune University</h4>
           <p class="text-sm text-gray-700">Bachelor’s in Computer Science — Pune, India</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-8 border-t">
-      <h3 class="text-2xl font-semibold">Contact</h3>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-4 border rounded">
-          <p class="text-gray-700">Email: <a href="mailto:akshayykatageri@gmail.com" class="text-blue-600">akshayykatageri@gmail.com</a></p>
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 border-b border-gray-200">
+      <h3 class="text-3xl font-semibold mb-6">Contact</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 border rounded-xl">
+          <p class="text-gray-700">Email: <a href="mailto:akshayykatageri@gmail.com" class="text-blue-600 hover:underline">akshayykatageri@gmail.com</a></p>
           <p class="text-gray-700 mt-2">Phone: +1 (864)-837-0224</p>
           <p class="text-gray-700 mt-2">Location: Jersey City, NJ</p>
-          <p class="text-gray-700 mt-2">LinkedIn: <a href="https://www.linkedin.com/in/akshayy-katageri/" target="_blank" class="text-blue-600">View Profile</a></p>
+          <p class="text-gray-700 mt-2">LinkedIn: <a href="https://www.linkedin.com/in/akshayy-katageri/" target="_blank" class="text-blue-600 hover:underline">View Profile</a></p>
         </div>
-        <div class="p-4 border rounded">
-          <h4 class="font-semibold">Quick Message</h4>
+        <div class="p-5 border rounded-xl">
+          <h4 class="font-semibold text-lg">Quick Message</h4>
           <p class="text-sm text-gray-700 mt-2">Copy this short intro to send recruiters:</p>
-          <blockquote class="mt-3 p-3 bg-gray-50 rounded text-sm text-gray-700">"Hi — I’m Akshay Katageri, a Generative AI Engineer specializing in multi-agent systems, RAG, and production serving. I build scalable AI workflows that deliver measurable business impact. I’d love to discuss opportunities at your company."</blockquote>
+          <blockquote class="mt-3 p-3 bg-gray-50 rounded text-sm text-gray-700 border-l-4 border-accent">\"Hi — I’m Akshay Katageri, a Generative AI Engineer specializing in multi-agent systems, RAG, and production serving. I build scalable AI workflows that deliver measurable business impact. I’d love to discuss opportunities at your company.\"</blockquote>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-12 text-center text-sm text-gray-600">
-      <p>Built by Akshay Katageri · <a href="https://www.fastfol.io/akshayykatageri" target="_blank" class="text-blue-600">Portfolio</a> · <a href="Akshay-Katageri- Resume.pdf" download class="ml-2 text-blue-600">Download Resume</a></p>
+      <p>Built by Akshay Katageri · 
+        <a href="https://www.fastfol.io/akshayykatageri" target="_blank" class="text-blue-600 hover:underline">Portfolio</a> · 
+        <a href="Akshay-Katageri- Resume.pdf" download class="ml-2 text-blue-600 hover:underline">Download Resume</a>
+      </p>
     </footer>
   </main>
 </body>
